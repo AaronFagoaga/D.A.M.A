@@ -19,14 +19,13 @@ class WhoIAmFragment : Fragment() {
             R.layout.fragment_who_i_am,
             container, false
         )
-        view.findViewById<TextView>(R.id.tvNombre).text = "Nombre: Tu Nombre"
-        view.findViewById<TextView>(R.id.tvApellido).text = "Apellido: Tu Apellido"
-        view.findViewById<TextView>(R.id.tvCarnet).text = "Carnet: Tu Carnet"
-        view.findViewById<TextView>(R.id.tvTelefono).text = "Teléfono: Tu Teléfono"
+        view.findViewById<TextView>(R.id.tvNombre).text = "Junior Aaron Fagoaga Guevara"
+        view.findViewById<TextView>(R.id.tvCarnet).text = "U20210154"
+        view.findViewById<TextView>(R.id.tvTelefono).text = "+503 77341732"
         view.findViewById<Button>(R.id.btnEscribeme).setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data =
-                Uri.parse("https://wa.me/tu_numero_de_celular")
+                Uri.parse("https://wa.me/77341732")
             startActivity(intent)
         }
         return view

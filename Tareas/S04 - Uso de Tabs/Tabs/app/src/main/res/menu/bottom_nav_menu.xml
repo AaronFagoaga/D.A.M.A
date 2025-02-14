@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/whoIAmFragment"
-        android:icon="@drawable/who_i_am"
-        android:title="@string/quien_soy" />
+        android:icon="@drawable/xwho_i_am"
+        android:title="Sobre mí" />
     <item
         android:id="@+id/careerFragment"
-        android:icon="@drawable/career"
+        android:icon="@drawable/xcareer"
         android:title="@string/que_estudio" />
     <item
         android:id="@+id/technologiesFragment"
-        android:icon="@drawable/technology"
+        android:icon="@drawable/xtechnology"
         android:title="@string/tecnologias" />
 </menu>

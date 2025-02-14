@@ -15,14 +15,14 @@ class TechnologiesFragment : Fragment() {
     ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_technologies, container, false)
         val tvTecnologias = view.findViewById<TextView>(R.id.tvTecnologias)
-        tvTecnologias.text = "- Kotlin\n- Android\n- Java\n- PHP"
+        tvTecnologias.text = "- Kotlin\n- Android\n- Java\n- PHP\n- C#\n- JavaScript\n- HTML\n- Dormir"
 
         view.findViewById<Button>(R.id.btnContactame).setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:")
                 putExtra(Intent.EXTRA_EMAIL,
-                    arrayOf("ejemplo@gmail.com"))
-                putExtra(Intent.EXTRA_SUBJECT, "Me interesa tus servicios")
+                    arrayOf("sraaron1@outlook.com"))
+                putExtra(Intent.EXTRA_SUBJECT, "Me interesa tus servicios UwU")
             }
             startActivity(intent)
         }

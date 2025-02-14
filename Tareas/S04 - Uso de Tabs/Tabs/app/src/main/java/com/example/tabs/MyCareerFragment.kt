@@ -14,9 +14,9 @@
         override fun onCreateView(inflater: LayoutInflater, container:
         ViewGroup?, savedInstanceState: Bundle?): View? {
             val view = inflater.inflate(R.layout.fragment_my_career, container, false)
-            view.findViewById<TextView>(R.id.tvCarrera).text = "Carrera: Ingenieria en Desarrollo de Software"
-            view.findViewById<TextView>(R.id.tvCiclos).text = "Ciclos cursados: 5 ciclos"
-            view.findViewById<TextView>(R.id.tvMaterias).text = "Materias aprovadas: 8 materias"
+            view.findViewById<TextView>(R.id.tvCarrera).text = "INGENIERÍA EN DESARROLLO DE SOFTWARE."
+            view.findViewById<TextView>(R.id.tvCiclos).text = "9 ciclos"
+            view.findViewById<TextView>(R.id.tvMaterias).text = "¡Muchas!"
             view.findViewById<Button>(R.id.btnMiUniversidad).setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://www.univo.edu.sv/"))
