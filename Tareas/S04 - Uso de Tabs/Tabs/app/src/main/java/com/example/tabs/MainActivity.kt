@@ -31,5 +31,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottomNavView.setupWithNavController(navController)
+
+        //SI LO HICE INGENIERO, CREAME - U20210154 - AARON FAGOAGA
     }
 }
