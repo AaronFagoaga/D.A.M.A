@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">puellaLearn</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">English</string>
+    <string name="tab_text_2">Spanish</string>
+</resources>
