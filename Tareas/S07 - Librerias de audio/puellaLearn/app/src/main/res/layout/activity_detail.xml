@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/white">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,43 +17,51 @@
             android:id="@+id/detailImage"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:layout_gravity="center"
-            android:scaleType="centerInside" />
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_corners"
+            android:elevation="6dp" />
 
         <TextView
             android:id="@+id/detailName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="24sp"
+            android:textSize="26sp"
             android:textStyle="bold"
+            android:textColor="@color/black"
             android:paddingTop="16dp" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:paddingTop="16dp">
-
-        <FrameLayout
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp">
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
 
-            <ImageButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/playButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/play" />
-        </FrameLayout>
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play"
+                app:icon="@drawable/play"
+                app:iconPadding="8dp"
+                app:cornerRadius="50dp"
+                app:backgroundTint="@color/colorPrimary"
+                app:strokeColor="@color/colorPrimaryDark" />
 
-        <ImageButton
-            android:id="@+id/stopButton"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@drawable/pause" />
-    </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/stopButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                app:icon="@drawable/pause"
+                app:iconPadding="8dp"
+                app:cornerRadius="50dp"
+                app:backgroundTint="@color/colorAccent"
+                app:strokeColor="@color/colorPrimaryDark"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/detailPronunciation"
@@ -58,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:paddingTop="16dp" />
     </LinearLayout>
 </ScrollView>

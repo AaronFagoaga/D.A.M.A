@@ -8,12 +8,19 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:background="@color/backgroundColor"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       >
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/colorAccentDark"
+
             app:tabGravity="fill"
             app:tabMode="fixed" />
     </com.google.android.material.appbar.AppBarLayout>
