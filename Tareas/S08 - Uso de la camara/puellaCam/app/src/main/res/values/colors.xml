@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="neonPink">#FF00FF</color>
+    <color name="neonCyan">#00FFFF</color>
+    <color name="neonBlue">#3A0CA3</color>
+    <color name="neonPurple">#7209B7</color>
+    <color name="darkPurple">#240046</color>
+    <color name="black">#000000</color>
+</resources>
