@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "617460281986",
+    "project_id": "notificaciones-push-6a6ab",
+    "storage_bucket": "notificaciones-push-6a6ab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617460281986:android:9335019b151100df537a9b",
+        "android_client_info": {
+          "package_name": "com.jfagoaga.notificaciones_push"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKlxSIa5q331cSHjcifx4YBzFlfXI9nVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
