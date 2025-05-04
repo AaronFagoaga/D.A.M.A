@@ -37,7 +37,7 @@
             android:background="@drawable/edittext_dark_background"
             android:textColor="@color/text_primary"
             android:hint="Ej: Juan Pérez"
-            android:inputType="textPersonName"
+            android:inputType="text|textCapWords"
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
@@ -53,8 +53,8 @@
             android:id="@+id/editTextContactPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Ej: 1234-5678"
-            android:inputType="phone"
+            android:hint="Ej: 12345678"
+            android:inputType="number"
             android:padding="12dp"
             android:background="@drawable/edittext_dark_background"
             android:textColor="@color/text_primary"

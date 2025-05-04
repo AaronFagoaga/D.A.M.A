@@ -9,6 +9,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.jfagoaga.puellaagenda.classes.Configs
+import com.jfagoaga.puellaagenda.utils.ValidationUtils
 import org.json.JSONObject
 
 class AddContactActivity : AppCompatActivity() {
@@ -29,12 +30,21 @@ class AddContactActivity : AppCompatActivity() {
             val name = editTextName.text.toString().trim()
             val phone = editTextPhone.text.toString().trim()
 
-            if (name.isEmpty() || phone.isEmpty()) {
-                Toast.makeText(this, "Nombre y teléfono son requeridos", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+            when {
+                name.isEmpty() || phone.isEmpty() -> {
+                    Toast.makeText(this, "Nombre y teléfono son requeridos", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                !ValidationUtils.isValidName(name) -> {
+                    editTextName.error = "Solo letras, números y espacios"
+                    return@setOnClickListener
+                }
+                !ValidationUtils.isValidPhone(phone) -> {
+                    editTextPhone.error = "Solo números (sin espacios ni caracteres especiales)"
+                    return@setOnClickListener
+                }
+                else -> createContact(name, phone)
             }
-
-            createContact(name, phone)
         }
     }
 

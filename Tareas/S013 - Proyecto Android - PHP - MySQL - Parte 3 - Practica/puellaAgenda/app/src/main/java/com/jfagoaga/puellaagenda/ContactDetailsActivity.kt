@@ -12,6 +12,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.jfagoaga.puellaagenda.classes.Configs
+import com.jfagoaga.puellaagenda.utils.ValidationUtils
 import org.json.JSONObject
 
 class ContactDetailsActivity : AppCompatActivity() {
@@ -60,12 +61,21 @@ class ContactDetailsActivity : AppCompatActivity() {
                 val newName = editTextName.text.toString().trim()
                 val newPhone = editTextPhone.text.toString().trim()
 
-                if (newName.isEmpty() || newPhone.isEmpty()) {
-                    Toast.makeText(this, "Nombre y teléfono son requeridos", Toast.LENGTH_SHORT).show()
-                    return@setPositiveButton
+                when {
+                    newName.isEmpty() || newPhone.isEmpty() -> {
+                        Toast.makeText(this, "Nombre y teléfono son requeridos", Toast.LENGTH_SHORT).show()
+                        return@setPositiveButton
+                    }
+                    !ValidationUtils.isValidName(newName) -> {
+                        editTextName.error = "Solo letras, números y espacios"
+                        return@setPositiveButton
+                    }
+                    !ValidationUtils.isValidPhone(newPhone) -> {
+                        editTextPhone.error = "Ingrese únicamente números."
+                        return@setPositiveButton
+                    }
+                    else -> updateContact(newName, newPhone)
                 }
-
-                updateContact(newName, newPhone)
             }
             .setNegativeButton("Cancelar", null)
             .show()
